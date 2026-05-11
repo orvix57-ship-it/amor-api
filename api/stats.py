@@ -1,8 +1,11 @@
 from pymongo import MongoClient
 from http.server import BaseHTTPRequestHandler
-import json, os
+import json
+from urllib.parse import quote_plus
 
-MONGO_URI = "mongodb+srv://amorbot:Amor@2025bot@cluster0.lrx0iil.mongodb.net/?appName=Cluster0"
+username = quote_plus("amorbot")
+password = quote_plus("Amor@2025bot")
+MONGO_URI = f"mongodb+srv://{username}:{password}@cluster0.lrx0iil.mongodb.net/?appName=Cluster0"
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
