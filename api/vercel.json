@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/api/stats",
-      "dest": "api/stats.py"
+      "dest": "/api/stats.py"
     }
   ]
 }
